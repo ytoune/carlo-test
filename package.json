@@ -21,8 +21,8 @@
   "homepage": "https://domain",
   "bin": "index.js",
   "pkg": {
-    "target": [
-      "node8-win"
+    "targets": [
+      "node8"
     ],
     "assets": "build/**/*"
   },

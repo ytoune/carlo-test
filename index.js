@@ -40,7 +40,7 @@ const main = async () => {
 }
 
 const development = (() => {
-	try { return !!require('./package.json') } catch(x) {}
+	// try { return !!require('./package.json') } catch(x) {}
 	return false
 })()
 

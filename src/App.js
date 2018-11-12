@@ -21,7 +21,7 @@ export class App extends Component {
 		} = this
 		return (
 			<div>
-				<p><input onChange={pushByEv} value={src}/></p>
+				<p><input onChange={pushByEv} value={src} placeholder="example: /etc/music/hoge.mp3"/></p>
 				<Audio src={src} />
 			</div>
 		)
