@@ -8,15 +8,15 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "carlo": "^0.9.20",
-    "mime-types": "^2.1.21"
+    "carlo": "^0.9.46",
+    "mime-types": "^2.1.24"
   },
   "devDependencies": {
-    "pkg": "^4.3.4",
-    "react": "^16.6.1",
-    "react-dom": "^16.6.1",
-    "react-scripts": "^2.1.1",
-    "rxjs": "^6.3.3"
+    "pkg": "^4.4.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-scripts": "^3.0.1",
+    "rxjs": "^6.5.2"
   },
   "homepage": "https://domain",
   "bin": "index.js",

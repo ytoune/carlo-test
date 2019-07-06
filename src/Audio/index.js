@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react'
 
 import { Subject } from 'rxjs'
@@ -12,7 +11,7 @@ export class Audio extends Component {
 	}
 	componentDidMount() {
 		const src$ = new Subject()
-		this.$ = src$.subscribe(src => this.setState({src}))
+		this.$ = src$.subscribe(src => this.setState({ src }))
 		this.push = src => src$.next(src)
 		this.fetch()
 	}
@@ -21,27 +20,28 @@ export class Audio extends Component {
 		this.$ = null
 		this.push = null
 	}
-	componentDidUpdate({src: prevsrc}) {
-		const {props: {src}} = this
+	componentDidUpdate({ src: prevsrc }) {
+		const {
+			props: { src },
+		} = this
 		if (src !== prevsrc) this.fetch()
 	}
 	async fetch() {
 		try {
-			const {props: {src}} = this
+			const {
+				props: { src },
+			} = this
 			const url = await getURL(src)
 			this.push && this.push(url)
-		} catch(x) {
+		} catch (x) {
 			console.error(x)
 		}
 	}
 	render() {
-		const {state: {src}} = this
+		const {
+			state: { src },
+		} = this
 		if (!src) return null
-		return (
-			<audio
-				src={src}
-				controls autoPlay
-			/>
-		)
+		return <audio src={src} controls autoPlay />
 	}
 }

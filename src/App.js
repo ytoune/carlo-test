@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react'
 
 import { Audio } from './Audio'
@@ -11,17 +10,23 @@ export class App extends Component {
 		this.state = {
 			src: localStorage[key] || '',
 		}
-		this.pushByEv = ({target: {value}}) =>
-			this.setState({src: localStorage[key] = value})
+		this.pushByEv = ({ target: { value } }) =>
+			this.setState({ src: (localStorage[key] = value) })
 	}
 	render() {
 		const {
 			pushByEv,
-			state: {src}
+			state: { src },
 		} = this
 		return (
 			<div>
-				<p><input onChange={pushByEv} value={src} placeholder="example: /etc/music/hoge.mp3"/></p>
+				<p>
+					<input
+						onChange={pushByEv}
+						value={src}
+						placeholder="example: /etc/music/hoge.mp3"
+					/>
+				</p>
 				<Audio src={src} />
 			</div>
 		)
